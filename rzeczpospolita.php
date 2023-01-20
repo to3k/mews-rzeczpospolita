@@ -7,7 +7,7 @@
     // YOUR MASTODON INSTANCE URL
     $instance_url = "[YOUR MASTODON INSTANCE URL GOES HERE]";
     // DEFINE YOUR MASTODON INSTANCE RATE LIMIT (MAX NUMBER OF LETTERS AVAILABLE IN ONE TOOT)
-    $instance_rate_limit = 2048;
+    $instance_rate_limit = 500;
     
     // RSS URLS (YOU CAN USE MULTIPLE THEN SEPARATE THEM WITH COMMAS)
     $urls = array(
