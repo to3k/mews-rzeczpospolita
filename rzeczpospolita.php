@@ -69,8 +69,8 @@
                     $hashtags = implode(" ", $hashtag);
 
                     // COMPOSE A TOOT WITH LESS THAN 500 LETTERS
-                    // CALCULATE HOW LONG CAN BE THE DESCRIPTION (500 - TITLE - SEPARATOR - 6X EOL - HASHTAGS - LINK(23) - 3X DOTS - 50X RESERVE)
-                    $description_limit = 500 - strlen($title) - 3 - 6 - strlen($hashtags) - 23 - 3 - 50;
+                    // CALCULATE HOW LONG CAN BE THE DESCRIPTION (INSTANCE RATE LIMIT - TITLE - SEPARATOR - 6X EOL - HASHTAGS - LINK - 3X DOTS - 10X RESERVE)
+                    $description_limit = $instance_rate_limit - strlen($title) - 3 - 6 - strlen($hashtags) - strlen($link) - 3 - 10;
                     // CHECK LENGTH OF DESCRIPTION AND SHORTEN IF NEEDED
                     if(strlen($description) > $description_limit)
                     {
