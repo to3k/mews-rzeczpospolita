@@ -71,7 +71,7 @@
 
                     // COMPOSE A TOOT WITH LESS THAN 500 LETTERS
                     // CALCULATE HOW LONG CAN BE THE DESCRIPTION (INSTANCE RATE LIMIT - TITLE - SEPARATOR - 6X EOL - HASHTAGS - LINK - 3X DOTS - 10X RESERVE)
-                    $description_limit = $instance_rate_limit - strlen($title) - 3 - 6 - strlen($hashtags) - strlen($link) - 3 - 10;
+                    $description_limit = $instance_rate_limit - strlen($title) - 10 - 6 - strlen($hashtags) - strlen($link) - 3 - 10;
                     // CHECK LENGTH OF DESCRIPTION AND SHORTEN IF NEEDED
                     if(strlen($description) > $description_limit)
                     {
@@ -90,7 +90,7 @@
                     // PUBLISH A NEW ARTICLE ON MASTODON
                     $status_data = array(
                         "status" => $status_message,
-                        "language" => "eng",
+                        "language" => "pl",
                         "visibility" => "unlisted"
                     );
 
